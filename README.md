@@ -101,7 +101,7 @@ CREATE TABLE students (
 1. Open Developer Command Prompt for VS 2022
 2. Move to your project folder using cd command. 
 ex. cd C:\Users\Admin\Desktop\ProjectFolder
-3.type "build" and enter.
+3. Type "build" and enter.
 //What build.bat do internally, it runs this;
 cl /EHsc main.cpp ^
   /I "include\jdbc" ^
