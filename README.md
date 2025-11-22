@@ -98,7 +98,7 @@ CREATE TABLE students (
 
 ## Instructions to run,
 
-1. Open Developer Command Prompt for VS 2022
+1. Open Developer Command Prompt for VS 2022 (x64 Native Tools Command Prompt VS 2022)
 2. Move to your project folder using cd command. 
 ex. cd C:\Users\Admin\Desktop\ProjectFolder
 3. Type "build" and enter.
