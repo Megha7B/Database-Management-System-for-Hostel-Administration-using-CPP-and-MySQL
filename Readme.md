@@ -1,71 +1,84 @@
-# 🚀 Hostel Management System (C++ + MySQL)
+# Database-Management-System-for-Hostel-Administration-using-CPP-and-MySQL
 
-A lightweight, fast, and clean **Hostel Management System** built using **C++**, **MySQL**, and **MySQL Connector/C++**.  
-Perfect for learning **database integration**, **file-free storage**, and **real-world console applications**.
+A simple and fast **Hostel Management System** built using **C++**,
+**MySQL**, and **MySQL Connector/C++**.\
+Perfect for learning **database connectivity** and building **real
+console applications**.
 
----
+------------------------------------------------------------------------
 
-<div align="center">
+## 🔥 Tech Stack
 
-### 🔥 Tech Stack
+-   C++\
+-   MySQL\
+-   MySQL Connector/C++\
+-   MSVC 2022 (Windows)
 
-![C++](https://img.shields.io/badge/C++-00599C?logo=c%2B%2B&logoColor=white&style=for-the-badge)
-![MySQL](https://img.shields.io/badge/MySQL-00618A?logo=mysql&logoColor=white&style=for-the-badge)
-![MSVC](https://img.shields.io/badge/Compiler-MSVC%202022-blue?style=for-the-badge)
-![Windows](https://img.shields.io/badge/Platform-Windows-lightgrey?style=for-the-badge)
-
-</div>
-
----
+------------------------------------------------------------------------
 
 ## 📌 Features
 
-✔ Admin login  
-✔ Add new students  
-✔ View all students  
-✔ Update **all fields** (Name, Age, Course, Year, Room, Phone, Email)  
-✔ Delete student  
-✔ Real MySQL backend  
-✔ Clean, modular C++ code  
-✔ Easy to compile using a single `build.bat`  
-✔ Beginner friendly  
+-   Admin login\
+-   Student login\
+-   Add new students\
+-   View all students\
+-   Update all student details\
+-   Delete student\
+-   Real MySQL backend\
+-   Easy build using a single batch file\
 
----
+------------------------------------------------------------------------
 
 ## 📂 Project Structure
 
-HostelManagement/
+    HostelManagement/
 │
-├── main.cpp
-├── build.bat
-├── run.bat
-├── README.md
+├── bin/
 │
 ├── include/
-│    └── jdbc/    # MySQL Connector headers
+│   ├── jdbc/
+│   ├── mysql/
+│   └── mysqlx/
 │
-└── output/
-     └── main.exe (generated after build)
+├── lib64/
+│   ├── plugin/
+│   └── vs14/
+│       ├── libcrypto-3-x64.dll
+│       ├── libssl-3-x64.dll
+│       ├── mysqlcppconn-10-vs14.dll
+│       ├── mysqlcppconn-10-vs14.pdb
+│       ├── mysqlcppconnx-2-vs14.dll
+│       └── mysqlcppconnx-2-vs14.pdb
+│
+├── output/
+│   ├── libmysql.dll
+│   ├── main.exe
+│   └── mysqlcppconn-10-vs14.dll
+│
+├── build.bat
+├── libmysql.dll
+├── main.cpp
+├── main.exe
+├── main.obj
+└── README.md
 
----
+------------------------------------------------------------------------
 
-## 🛠️ Installation & Setup
+## 🛠️ 1. Requirements
 
-### 1️⃣ Install Required Tools
+  Tool                      Needed For
+  ------------------------- ------------------------
+  MSVC Build Tools 2022     Compiling C++
+  MySQL Server              Database
+  MySQL Connector/C++ 9.4   C++ → MySQL connection
 
-| Tool | Purpose |
-|------|---------|
-| **MSVC Build Tools 2022** | C++ compiler & linker |
-| **MySQL Server** | Database backend |
-| **MySQL Connector/C++ 9.4** | API to connect C++ with MySQL |
+------------------------------------------------------------------------
 
----
+## 🗄️ 2. MySQL Setup
 
-## 🗄️ 2️⃣ MySQL Database Setup
+Run this in MySQL:
 
-Run these commands in MySQL:
-
-```sql
+``` sql
 CREATE DATABASE hostel;
 USE hostel;
 
@@ -79,21 +92,29 @@ CREATE TABLE students (
   contact VARCHAR(20),
   email VARCHAR(100)
 );
- 
+```
+
+------------------------------------------------------------------------
+
 ## Instructions to run,
 
-1) Open Developer Command Prompt for VS 2022
-2)//move to your project folder.
-cd C:\Users\Admin\Desktop\HostelManagement
-3)type build and enter.
+1. Open Developer Command Prompt for VS 2022 (x64 Native Tools Command Prompt VS 2022)
+2. Move to your project folder using cd command. 
+ex. cd C:\Users\Admin\Desktop\ProjectFolder
+3. Type "build" and enter.
 //What build.bat do internally, it runs this;
 cl /EHsc main.cpp ^
   /I "include\jdbc" ^
   /I "C:\Path\To\mysql-connector\include" ^
   /link /LIBPATH:"C:\Path\To\mysql-connector\lib64\vs14" mysqlcppconn.lib
 and give output, output/main.exe
-4)type main.exe and enter.
-There you go...!!
+4. Type main.exe and enter.
 
+There you go...!!
+------------------------------------------------------------------------
+
+## 🖼️ 4. Output (Screenshots)
+<img width="1366" height="720" alt="Screenshot 2025-11-22 163956" src="https://github.com/user-attachments/assets/0ee041c1-3871-44a4-9175-3b2c5e95217f" />
+<img width="1366" height="720" alt="Screenshot 2025-11-22 163841" src="https://github.com/user-attachments/assets/c98087ef-d279-4e94-8c68-40f260927f4e" />
 
 
